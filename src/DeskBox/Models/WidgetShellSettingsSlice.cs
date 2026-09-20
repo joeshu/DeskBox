@@ -21,7 +21,7 @@ public sealed class WidgetShellSettingsSlice
     /// Valid values: <c>"Mica"</c>, <c>"MicaAlt"</c>, <c>"Acrylic"</c>,
     /// <c>"AcrylicBase"</c>, <c>"Solid"</c>.
     /// </summary>
-    public string WidgetMaterialType { get; set; } = "Mica";
+    public string WidgetMaterialType { get; set; } = "Solid";
 
     /// <summary>Independent tint strength for native widget backdrop materials.</summary>
     public double WidgetMaterialIntensity { get; set; } = 0.65;

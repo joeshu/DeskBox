@@ -148,7 +148,7 @@ public sealed class SettingsCopyAndHierarchyTests
             windowXaml,
             StringComparison.Ordinal);
         Assert.Contains(
-            "public bool FileStacksEnabled { get; set; } = true;",
+            "public bool FileStacksEnabled { get; set; }",
             fileWidgetSettings,
             StringComparison.Ordinal);
         Assert.DoesNotContain(

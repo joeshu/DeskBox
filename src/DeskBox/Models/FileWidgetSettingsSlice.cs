@@ -29,7 +29,7 @@ public sealed class FileWidgetSettingsSlice
     /// Whether image and video files in file widgets should use the system file icon
     /// instead of media thumbnails.
     /// </summary>
-    public bool ShowImageFilesAsIcons { get; set; }
+    public bool ShowImageFilesAsIcons { get; set; } = true;
 
     /// <summary>
     /// Whether list view should show secondary file details under item names.
@@ -42,7 +42,7 @@ public sealed class FileWidgetSettingsSlice
     public bool ShowFileItemPathTooltips { get; set; } = true;
 
     /// <summary>Whether file widgets automatically group related items into stacks.</summary>
-    public bool FileStacksEnabled { get; set; } = true;
+    public bool FileStacksEnabled { get; set; }
 
     /// <summary>
     /// Whether loose files are grouped into stacks automatically. Manual
