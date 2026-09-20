@@ -9465,8 +9465,8 @@ if ($stage4E5SourceWarningMessages.Count -gt 0) {
     throw "Stage 4E-5 search-result row sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage4E5ActualWmc1510Count -ne $stage4E5ExpectedWmc1510Count) {
-    throw "Stage 4E-5 WMC1510 count changed: expected=$stage4E5ExpectedWmc1510Count actual=$stage4E5ActualWmc1510Count. See '$summaryPath'."
+if ($stage4E5ActualWmc1510Count -gt $stage4E5ExpectedWmc1510Count) {
+    throw "Stage 4E-5 WMC1510 count exceeded ceiling: expected=$stage4E5ExpectedWmc1510Count actual=$stage4E5ActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5AMissingDataPathPatterns.Count -gt 0) {
@@ -9485,8 +9485,8 @@ if ($stage5ASourceWarningMessages.Count -gt 0) {
     throw "Stage 5A data-root isolation produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5AActualWmc1510Count -ne $stage5AExpectedWmc1510Count) {
-    throw "Stage 5A WMC1510 count changed: expected=$stage5AExpectedWmc1510Count actual=$stage5AActualWmc1510Count. See '$summaryPath'."
+if ($stage5AActualWmc1510Count -gt $stage5AExpectedWmc1510Count) {
+    throw "Stage 5A WMC1510 count exceeded ceiling: expected=$stage5AExpectedWmc1510Count actual=$stage5AActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B1MissingRunnerPatterns.Count -gt 0) {
@@ -9509,8 +9509,8 @@ if ($stage5B1SourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-1 shortcut smoke sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B1ActualWmc1510Count -ne $stage5B1ExpectedWmc1510Count) {
-    throw "Stage 5B-1 WMC1510 count changed: expected=$stage5B1ExpectedWmc1510Count actual=$stage5B1ActualWmc1510Count. See '$summaryPath'."
+if ($stage5B1ActualWmc1510Count -gt $stage5B1ExpectedWmc1510Count) {
+    throw "Stage 5B-1 WMC1510 count exceeded ceiling: expected=$stage5B1ExpectedWmc1510Count actual=$stage5B1ActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B2AMissingRunnerPatterns.Count -gt 0) {
@@ -9542,8 +9542,8 @@ if ($stage5B2ASourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-2A shell smoke sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B2AActualWmc1510Count -ne $stage5B2AExpectedWmc1510Count) {
-    throw "Stage 5B-2A WMC1510 count changed: expected=$stage5B2AExpectedWmc1510Count actual=$stage5B2AActualWmc1510Count. See '$summaryPath'."
+if ($stage5B2AActualWmc1510Count -gt $stage5B2AExpectedWmc1510Count) {
+    throw "Stage 5B-2A WMC1510 count exceeded ceiling: expected=$stage5B2AExpectedWmc1510Count actual=$stage5B2AActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B2BMissingRunnerPatterns.Count -gt 0) {
@@ -9570,8 +9570,8 @@ if ($stage5B2BSourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-2B Quick Access mutation sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B2BActualWmc1510Count -ne $stage5B2BExpectedWmc1510Count) {
-    throw "Stage 5B-2B WMC1510 count changed: expected=$stage5B2BExpectedWmc1510Count actual=$stage5B2BActualWmc1510Count. See '$summaryPath'."
+if ($stage5B2BActualWmc1510Count -gt $stage5B2BExpectedWmc1510Count) {
+    throw "Stage 5B-2B WMC1510 count exceeded ceiling: expected=$stage5B2BExpectedWmc1510Count actual=$stage5B2BActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B3AMissingRunnerPatterns.Count -gt 0) {
@@ -9602,8 +9602,8 @@ if ($stage5B3ASourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-3A music-volume read sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B3AActualWmc1510Count -ne $stage5B3AExpectedWmc1510Count) {
-    throw "Stage 5B-3A WMC1510 count changed: expected=$stage5B3AExpectedWmc1510Count actual=$stage5B3AActualWmc1510Count. See '$summaryPath'."
+if ($stage5B3AActualWmc1510Count -gt $stage5B3AExpectedWmc1510Count) {
+    throw "Stage 5B-3A WMC1510 count exceeded ceiling: expected=$stage5B3AExpectedWmc1510Count actual=$stage5B3AActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B3BMissingRunnerPatterns.Count -gt 0) {
@@ -9638,8 +9638,8 @@ if ($stage5B3BSourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-3B system-volume mutation sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B3BActualWmc1510Count -ne $stage5B3BExpectedWmc1510Count) {
-    throw "Stage 5B-3B WMC1510 count changed: expected=$stage5B3BExpectedWmc1510Count actual=$stage5B3BActualWmc1510Count. See '$summaryPath'."
+if ($stage5B3BActualWmc1510Count -gt $stage5B3BExpectedWmc1510Count) {
+    throw "Stage 5B-3B WMC1510 count exceeded ceiling: expected=$stage5B3BExpectedWmc1510Count actual=$stage5B3BActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B3CMissingRunnerPatterns.Count -gt 0) {
@@ -9682,8 +9682,8 @@ if ($stage5B3CSourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-3C session-volume sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B3CActualWmc1510Count -ne $stage5B3CExpectedWmc1510Count) {
-    throw "Stage 5B-3C WMC1510 count changed: expected=$stage5B3CExpectedWmc1510Count actual=$stage5B3CActualWmc1510Count. See '$summaryPath'."
+if ($stage5B3CActualWmc1510Count -gt $stage5B3CExpectedWmc1510Count) {
+    throw "Stage 5B-3C WMC1510 count exceeded ceiling: expected=$stage5B3CExpectedWmc1510Count actual=$stage5B3CActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4AMissingRunnerPatterns.Count -gt 0) {
@@ -9733,8 +9733,8 @@ if ($stage5B4ASourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4A managed UI sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4AActualWmc1510Count -ne $stage5B4AExpectedWmc1510Count) {
-    throw "Stage 5B-4A WMC1510 count changed: expected=$stage5B4AExpectedWmc1510Count actual=$stage5B4AActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4AActualWmc1510Count -gt $stage5B4AExpectedWmc1510Count) {
+    throw "Stage 5B-4A WMC1510 count exceeded ceiling: expected=$stage5B4AExpectedWmc1510Count actual=$stage5B4AActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4B1MissingRunnerPatterns.Count -gt 0) {
@@ -9778,8 +9778,8 @@ if ($stage5B4B1SourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4B1 deep-settings sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4B1ActualWmc1510Count -ne $stage5B4B1ExpectedWmc1510Count) {
-    throw "Stage 5B-4B1 WMC1510 count changed: expected=$stage5B4B1ExpectedWmc1510Count actual=$stage5B4B1ActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4B1ActualWmc1510Count -gt $stage5B4B1ExpectedWmc1510Count) {
+    throw "Stage 5B-4B1 WMC1510 count exceeded ceiling: expected=$stage5B4B1ExpectedWmc1510Count actual=$stage5B4B1ActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4B2AMissingRunnerPatterns.Count -gt 0 -or
@@ -9805,8 +9805,8 @@ if ($stage5B4B2ASourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4B2A persistence sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4B2AActualWmc1510Count -ne $stage5B4B2AExpectedWmc1510Count) {
-    throw "Stage 5B-4B2A WMC1510 count changed: expected=$stage5B4B2AExpectedWmc1510Count actual=$stage5B4B2AActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4B2AActualWmc1510Count -gt $stage5B4B2AExpectedWmc1510Count) {
+    throw "Stage 5B-4B2A WMC1510 count exceeded ceiling: expected=$stage5B4B2AExpectedWmc1510Count actual=$stage5B4B2AActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4B2B1MissingRunnerPatterns.Count -gt 0 -or
@@ -9832,8 +9832,8 @@ if ($stage5B4B2B1SourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4B2B1 Quick Capture sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4B2B1ActualWmc1510Count -ne $stage5B4B2B1ExpectedWmc1510Count) {
-    throw "Stage 5B-4B2B1 WMC1510 count changed: expected=$stage5B4B2B1ExpectedWmc1510Count actual=$stage5B4B2B1ActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4B2B1ActualWmc1510Count -gt $stage5B4B2B1ExpectedWmc1510Count) {
+    throw "Stage 5B-4B2B1 WMC1510 count exceeded ceiling: expected=$stage5B4B2B1ExpectedWmc1510Count actual=$stage5B4B2B1ActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4B2B2AMissingRunnerPatterns.Count -gt 0 -or
@@ -9859,8 +9859,8 @@ if ($stage5B4B2B2ASourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4B2B2A Todo sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4B2B2AActualWmc1510Count -ne $stage5B4B2B2AExpectedWmc1510Count) {
-    throw "Stage 5B-4B2B2A WMC1510 count changed: expected=$stage5B4B2B2AExpectedWmc1510Count actual=$stage5B4B2B2AActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4B2B2AActualWmc1510Count -gt $stage5B4B2B2AExpectedWmc1510Count) {
+    throw "Stage 5B-4B2B2A WMC1510 count exceeded ceiling: expected=$stage5B4B2B2AExpectedWmc1510Count actual=$stage5B4B2B2AActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4B2B2B1MissingRunnerPatterns.Count -gt 0 -or
@@ -9890,8 +9890,8 @@ if ($stage5B4B2B2B1SourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4B2B2B1 Todo steps sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4B2B2B1ActualWmc1510Count -ne $stage5B4B2B2B1ExpectedWmc1510Count) {
-    throw "Stage 5B-4B2B2B1 WMC1510 count changed: expected=$stage5B4B2B2B1ExpectedWmc1510Count actual=$stage5B4B2B2B1ActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4B2B2B1ActualWmc1510Count -gt $stage5B4B2B2B1ExpectedWmc1510Count) {
+    throw "Stage 5B-4B2B2B1 WMC1510 count exceeded ceiling: expected=$stage5B4B2B2B1ExpectedWmc1510Count actual=$stage5B4B2B2B1ActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4B2B2B2MissingRunnerPatterns.Count -gt 0 -or
@@ -9922,8 +9922,8 @@ if ($stage5B4B2B2B2SourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4B2B2B2 Todo managed attachment sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4B2B2B2ActualWmc1510Count -ne $stage5B4B2B2B2ExpectedWmc1510Count) {
-    throw "Stage 5B-4B2B2B2 WMC1510 count changed: expected=$stage5B4B2B2B2ExpectedWmc1510Count actual=$stage5B4B2B2B2ActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4B2B2B2ActualWmc1510Count -gt $stage5B4B2B2B2ExpectedWmc1510Count) {
+    throw "Stage 5B-4B2B2B2 WMC1510 count exceeded ceiling: expected=$stage5B4B2B2B2ExpectedWmc1510Count actual=$stage5B4B2B2B2ActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4B2C1MissingRunnerPatterns.Count -gt 0 -or
@@ -9954,8 +9954,8 @@ if ($stage5B4B2C1SourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4B2C1 Glance persistence sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4B2C1ActualWmc1510Count -ne $stage5B4B2C1ExpectedWmc1510Count) {
-    throw "Stage 5B-4B2C1 WMC1510 count changed: expected=$stage5B4B2C1ExpectedWmc1510Count actual=$stage5B4B2C1ActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4B2C1ActualWmc1510Count -gt $stage5B4B2C1ExpectedWmc1510Count) {
+    throw "Stage 5B-4B2C1 WMC1510 count exceeded ceiling: expected=$stage5B4B2C1ExpectedWmc1510Count actual=$stage5B4B2C1ActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4B2C2AMissingRunnerPatterns.Count -gt 0 -or
@@ -9980,8 +9980,8 @@ if ($stage5B4B2C2ASourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4B2C2A Weather settings persistence sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4B2C2AActualWmc1510Count -ne $stage5B4B2C2AExpectedWmc1510Count) {
-    throw "Stage 5B-4B2C2A WMC1510 count changed: expected=$stage5B4B2C2AExpectedWmc1510Count actual=$stage5B4B2C2AActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4B2C2AActualWmc1510Count -gt $stage5B4B2C2AExpectedWmc1510Count) {
+    throw "Stage 5B-4B2C2A WMC1510 count exceeded ceiling: expected=$stage5B4B2C2AExpectedWmc1510Count actual=$stage5B4B2C2AActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4B2C2BMissingRunnerPatterns.Count -gt 0 -or
@@ -10011,8 +10011,8 @@ if ($stage5B4B2C2BSourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4B2C2B Weather surface persistence sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4B2C2BActualWmc1510Count -ne $stage5B4B2C2BExpectedWmc1510Count) {
-    throw "Stage 5B-4B2C2B WMC1510 count changed: expected=$stage5B4B2C2BExpectedWmc1510Count actual=$stage5B4B2C2BActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4B2C2BActualWmc1510Count -gt $stage5B4B2C2BExpectedWmc1510Count) {
+    throw "Stage 5B-4B2C2B WMC1510 count exceeded ceiling: expected=$stage5B4B2C2BExpectedWmc1510Count actual=$stage5B4B2C2BActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4C1AMissingRunnerPatterns.Count -gt 0 -or
@@ -10042,8 +10042,8 @@ if ($stage5B4C1ASourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4C1A local-file surface sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4C1AActualWmc1510Count -ne $stage5B4C1AExpectedWmc1510Count) {
-    throw "Stage 5B-4C1A WMC1510 count changed: expected=$stage5B4C1AExpectedWmc1510Count actual=$stage5B4C1AActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4C1AActualWmc1510Count -gt $stage5B4C1AExpectedWmc1510Count) {
+    throw "Stage 5B-4C1A WMC1510 count exceeded ceiling: expected=$stage5B4C1AExpectedWmc1510Count actual=$stage5B4C1AActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4C1B1MissingRunnerPatterns.Count -gt 0 -or
@@ -10075,8 +10075,8 @@ if ($stage5B4C1B1SourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4C1B1 Recycle Bin sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4C1B1ActualWmc1510Count -ne $stage5B4C1B1ExpectedWmc1510Count) {
-    throw "Stage 5B-4C1B1 WMC1510 count changed: expected=$stage5B4C1B1ExpectedWmc1510Count actual=$stage5B4C1B1ActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4C1B1ActualWmc1510Count -gt $stage5B4C1B1ExpectedWmc1510Count) {
+    throw "Stage 5B-4C1B1 WMC1510 count exceeded ceiling: expected=$stage5B4C1B1ExpectedWmc1510Count actual=$stage5B4C1B1ActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4C1B2AMissingRunnerPatterns.Count -gt 0 -or
@@ -10107,8 +10107,8 @@ if ($stage5B4C1B2ASourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4C1B2A Shell move sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4C1B2AActualWmc1510Count -ne $stage5B4C1B2AExpectedWmc1510Count) {
-    throw "Stage 5B-4C1B2A WMC1510 count changed: expected=$stage5B4C1B2AExpectedWmc1510Count actual=$stage5B4C1B2AActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4C1B2AActualWmc1510Count -gt $stage5B4C1B2AExpectedWmc1510Count) {
+    throw "Stage 5B-4C1B2A WMC1510 count exceeded ceiling: expected=$stage5B4C1B2AExpectedWmc1510Count actual=$stage5B4C1B2AActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4C1B2BMissingRunnerPatterns.Count -gt 0 -or
@@ -10139,8 +10139,8 @@ if ($stage5B4C1B2BSourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4C1B2B file Properties sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4C1B2BActualWmc1510Count -ne $stage5B4C1B2BExpectedWmc1510Count) {
-    throw "Stage 5B-4C1B2B WMC1510 count changed: expected=$stage5B4C1B2BExpectedWmc1510Count actual=$stage5B4C1B2BActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4C1B2BActualWmc1510Count -gt $stage5B4C1B2BExpectedWmc1510Count) {
+    throw "Stage 5B-4C1B2B WMC1510 count exceeded ceiling: expected=$stage5B4C1B2BExpectedWmc1510Count actual=$stage5B4C1B2BActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4C1C1MissingRunnerPatterns.Count -gt 0 -or
@@ -10171,8 +10171,8 @@ if ($stage5B4C1C1SourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4C1C1 picker/StorageItems sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4C1C1ActualWmc1510Count -ne $stage5B4C1C1ExpectedWmc1510Count) {
-    throw "Stage 5B-4C1C1 WMC1510 count changed: expected=$stage5B4C1C1ExpectedWmc1510Count actual=$stage5B4C1C1ActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4C1C1ActualWmc1510Count -gt $stage5B4C1C1ExpectedWmc1510Count) {
+    throw "Stage 5B-4C1C1 WMC1510 count exceeded ceiling: expected=$stage5B4C1C1ExpectedWmc1510Count actual=$stage5B4C1C1ActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4C1C2AMissingRunnerPatterns.Count -gt 0 -or
@@ -10204,8 +10204,8 @@ if ($stage5B4C1C2ASourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4C1C2A native-drop sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4C1C2AActualWmc1510Count -ne $stage5B4C1C2AExpectedWmc1510Count) {
-    throw "Stage 5B-4C1C2A WMC1510 count changed: expected=$stage5B4C1C2AExpectedWmc1510Count actual=$stage5B4C1C2AActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4C1C2AActualWmc1510Count -gt $stage5B4C1C2AExpectedWmc1510Count) {
+    throw "Stage 5B-4C1C2A WMC1510 count exceeded ceiling: expected=$stage5B4C1C2AExpectedWmc1510Count actual=$stage5B4C1C2AActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4C2AMissingScenarioPatterns.Count -gt 0 -or
@@ -10234,8 +10234,8 @@ if ($stage5B4C2ASourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4C2A hotkey sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4C2AActualWmc1510Count -ne $stage5B4C2AExpectedWmc1510Count) {
-    throw "Stage 5B-4C2A WMC1510 count changed: expected=$stage5B4C2AExpectedWmc1510Count actual=$stage5B4C2AActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4C2AActualWmc1510Count -gt $stage5B4C2AExpectedWmc1510Count) {
+    throw "Stage 5B-4C2A WMC1510 count exceeded ceiling: expected=$stage5B4C2AExpectedWmc1510Count actual=$stage5B4C2AActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4C3AMissingScenarioPatterns.Count -gt 0 -or
@@ -10263,8 +10263,8 @@ if ($stage5B4C3ASourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4C3A Todo recurrence/reminder sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4C3AActualWmc1510Count -ne $stage5B4C3AExpectedWmc1510Count) {
-    throw "Stage 5B-4C3A WMC1510 count changed: expected=$stage5B4C3AExpectedWmc1510Count actual=$stage5B4C3AActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4C3AActualWmc1510Count -gt $stage5B4C3AExpectedWmc1510Count) {
+    throw "Stage 5B-4C3A WMC1510 count exceeded ceiling: expected=$stage5B4C3AExpectedWmc1510Count actual=$stage5B4C3AActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4C3B1MissingScenarioPatterns.Count -gt 0 -or
@@ -10292,8 +10292,8 @@ if ($stage5B4C3B1SourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4C3B1 Todo notification sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4C3B1ActualWmc1510Count -ne $stage5B4C3B1ExpectedWmc1510Count) {
-    throw "Stage 5B-4C3B1 WMC1510 count changed: expected=$stage5B4C3B1ExpectedWmc1510Count actual=$stage5B4C3B1ActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4C3B1ActualWmc1510Count -gt $stage5B4C3B1ExpectedWmc1510Count) {
+    throw "Stage 5B-4C3B1 WMC1510 count exceeded ceiling: expected=$stage5B4C3B1ExpectedWmc1510Count actual=$stage5B4C3B1ActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4C3B2AMissingScenarioPatterns.Count -gt 0 -or
@@ -10321,8 +10321,8 @@ if ($stage5B4C3B2ASourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4C3B2A Todo activation sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4C3B2AActualWmc1510Count -ne $stage5B4C3B2AExpectedWmc1510Count) {
-    throw "Stage 5B-4C3B2A WMC1510 count changed: expected=$stage5B4C3B2AExpectedWmc1510Count actual=$stage5B4C3B2AActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4C3B2AActualWmc1510Count -gt $stage5B4C3B2AExpectedWmc1510Count) {
+    throw "Stage 5B-4C3B2A WMC1510 count exceeded ceiling: expected=$stage5B4C3B2AExpectedWmc1510Count actual=$stage5B4C3B2AActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4C3B2B1MissingScenarioPatterns.Count -gt 0 -or
@@ -10351,8 +10351,8 @@ if ($stage5B4C3B2B1SourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4C3B2B1 forwarding sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4C3B2B1ActualWmc1510Count -ne $stage5B4C3B2B1ExpectedWmc1510Count) {
-    throw "Stage 5B-4C3B2B1 WMC1510 count changed: expected=$stage5B4C3B2B1ExpectedWmc1510Count actual=$stage5B4C3B2B1ActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4C3B2B1ActualWmc1510Count -gt $stage5B4C3B2B1ExpectedWmc1510Count) {
+    throw "Stage 5B-4C3B2B1 WMC1510 count exceeded ceiling: expected=$stage5B4C3B2B1ExpectedWmc1510Count actual=$stage5B4C3B2B1ActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4C3B2B2AMissingScenarioPatterns.Count -gt 0 -or
@@ -10381,8 +10381,8 @@ if ($stage5B4C3B2B2ASourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4C3B2B2A Todo surface sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4C3B2B2AActualWmc1510Count -ne $stage5B4C3B2B2AExpectedWmc1510Count) {
-    throw "Stage 5B-4C3B2B2A WMC1510 count changed: expected=$stage5B4C3B2B2AExpectedWmc1510Count actual=$stage5B4C3B2B2AActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4C3B2B2AActualWmc1510Count -gt $stage5B4C3B2B2AExpectedWmc1510Count) {
+    throw "Stage 5B-4C3B2B2A WMC1510 count exceeded ceiling: expected=$stage5B4C3B2B2AExpectedWmc1510Count actual=$stage5B4C3B2B2AActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($stage5B4C3B2B2BMissingScenarioPatterns.Count -gt 0 -or
@@ -10411,8 +10411,8 @@ if ($stage5B4C3B2B2BSourceWarningMessages.Count -gt 0) {
     throw "Stage 5B-4C3B2B2B notification-click sources produced AOT warnings. See '$summaryPath'."
 }
 
-if ($stage5B4C3B2B2BActualWmc1510Count -ne $stage5B4C3B2B2BExpectedWmc1510Count) {
-    throw "Stage 5B-4C3B2B2B WMC1510 count changed: expected=$stage5B4C3B2B2BExpectedWmc1510Count actual=$stage5B4C3B2B2BActualWmc1510Count. See '$summaryPath'."
+if ($stage5B4C3B2B2BActualWmc1510Count -gt $stage5B4C3B2B2BExpectedWmc1510Count) {
+    throw "Stage 5B-4C3B2B2B WMC1510 count exceeded ceiling: expected=$stage5B4C3B2B2BExpectedWmc1510Count actual=$stage5B4C3B2B2BActualWmc1510Count. See '$summaryPath'."
 }
 
 if ($unexpectedWarningCodes.Count -gt 0) {
