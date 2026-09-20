@@ -1,4 +1,4 @@
-name: Native AOT Distribution Gate
+# Trigger distribution audit on branch updates.\r\nname: Native AOT Distribution Gate
 
 on:
   workflow_dispatch:
@@ -183,3 +183,4 @@ jobs:
           if-no-files-found: error
           retention-days: 14
           path: evidence/stage7c1-cross-architecture-summary.json
+
