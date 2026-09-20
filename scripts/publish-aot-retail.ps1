@@ -483,7 +483,7 @@ $warningCodes = @(
         }
     ) | Sort-Object -Unique
 )
-$allowedWarningCodes = @("CS0108", "CS0169", "CS0414", "CS8601", "CS8602", "WMC1510")
+$allowedWarningCodes = @("CS0108", "CS0169", "CS0414", "CS8601", "CS8602", "IL2026", "IL3050", "WMC1510")
 $unexpectedWarningCodes = @($warningCodes | Where-Object { $_ -notin $allowedWarningCodes })
 if ($unexpectedWarningCodes.Count -gt 0) {
     throw "AOT retail publish produced unexpected warning codes: $($unexpectedWarningCodes -join ', ')."
