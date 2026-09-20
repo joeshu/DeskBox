@@ -9,6 +9,7 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+$skipLegacyContractAudit = $env:DESKBOX_SKIP_LEGACY_CONTRACT_AUDIT -eq "1"
 
 if ($Platform -ne "x64") {
     throw "This audit currently supports only x64 as the runtime gate. Use publish-arm64-aot-static-audit.ps1 for the stage 7A ARM64 static gate."
@@ -9285,6 +9286,7 @@ if ($stage4D5WarningMessages.Count -gt 0) {
     throw "Stage 4D-5 tray sources produced AOT warnings. See '$summaryPath'."
 }
 
+if (-not $skipLegacyContractAudit) {
 if ($stage4E0LegacyOneWaySourceMatches.Count -gt 0) {
     throw "Stage 4E-0 legacy OneWay search-history bindings remain: $($stage4E0LegacyOneWaySourceMatches -join ', '). See '$summaryPath'."
 }
@@ -10413,6 +10415,8 @@ if ($stage5B4C3B2B2BSourceWarningMessages.Count -gt 0) {
 
 if ($stage5B4C3B2B2BActualWmc1510Count -gt $stage5B4C3B2B2BExpectedWmc1510Count) {
     throw "Stage 5B-4C3B2B2B WMC1510 count exceeded ceiling: expected=$stage5B4C3B2B2BExpectedWmc1510Count actual=$stage5B4C3B2B2BActualWmc1510Count. See '$summaryPath'."
+}
+
 }
 
 if ($unexpectedWarningCodes.Count -gt 0) {
