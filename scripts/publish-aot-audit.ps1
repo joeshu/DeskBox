@@ -7108,7 +7108,7 @@ $stage5B4C1C2AActualWmc1510Count = @(
 ).Count
 $stage5B4C2ASourceFiles = @(
     "src/DeskBox/App.AotHotkeySmoke.cs",
-    "src/DeskBox/Helpers/Win32Helper.AotHotkeySmoke.cs",
+    "src/DeskBox/Platform/Win32Helper.AotHotkeySmoke.cs",
     "src/DeskBox/Services/GlobalHotkeyService.cs",
     "src/DeskBox/Services/SearchHotkeyService.cs",
     "src/DeskBox/Services/ReservedHotkeyHookService.cs",
