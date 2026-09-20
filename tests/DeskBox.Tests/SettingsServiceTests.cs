@@ -33,7 +33,10 @@ public sealed class SettingsServiceTests : IDisposable
         Assert.Equal(SettingsLoadRecoveryState.DefaultsForMissingFile, service.LastLoadRecoveryState);
         Assert.False(service.Settings.HasResolvedInitialFileWidgetSetup);
         Assert.Equal(SettingsMigrationPipeline.CurrentSchemaVersion, service.Settings.SchemaVersion);
-        Assert.True(service.Settings.FileStacksEnabled);
+        Assert.False(service.Settings.FileStacksEnabled);
+        Assert.True(service.Settings.ShowImageFilesAsIcons);
+        Assert.Equal(SettingsService.WidgetMaterialTypeSolid, service.Settings.WidgetMaterialType);
+        Assert.False(service.Settings.EnableContinuousDecorativeAnimations);
         Assert.False(service.Settings.FileStackAutoStacking);
         Assert.Equal(
             SettingsService.NormalizeManagedStorageRootPath(
@@ -1139,6 +1142,14 @@ public sealed class SettingsServiceTests : IDisposable
         var newUserDefaults = new AppSettings();
         var restoredDefaults = new AppSettings
         {
+            WidgetMaterialType = SettingsService.WidgetMaterialTypeMica,
+            ShowImageFilesAsIcons = false,
+            FileStacksEnabled = true,
+            EnableContinuousDecorativeAnimations = true,
+            EnableTextMarqueeAnimations = true,
+            EnableVinylRotationAnimations = true,
+            EnableGlanceImageAutoRotation = true,
+            EnableCompactAmbientAnimations = true,
             WidgetAnimationEffect = SettingsService.WidgetAnimationEffectFade,
             LegacyWidgetCapsuleModeEnabled = true,
             WidgetCompactWidthMode = SettingsService.WidgetCompactWidthModeIndependent,
@@ -1182,6 +1193,20 @@ public sealed class SettingsServiceTests : IDisposable
 
         SettingsService.ApplyDefaultPreferences(restoredDefaults);
 
+        Assert.Equal(SettingsService.WidgetMaterialTypeSolid, newUserDefaults.WidgetMaterialType);
+        Assert.Equal(newUserDefaults.WidgetMaterialType, restoredDefaults.WidgetMaterialType);
+        Assert.True(newUserDefaults.ShowImageFilesAsIcons);
+        Assert.Equal(newUserDefaults.ShowImageFilesAsIcons, restoredDefaults.ShowImageFilesAsIcons);
+        Assert.False(newUserDefaults.FileStacksEnabled);
+        Assert.Equal(newUserDefaults.FileStacksEnabled, restoredDefaults.FileStacksEnabled);
+        Assert.False(newUserDefaults.EnableContinuousDecorativeAnimations);
+        Assert.Equal(
+            newUserDefaults.EnableContinuousDecorativeAnimations,
+            restoredDefaults.EnableContinuousDecorativeAnimations);
+        Assert.False(newUserDefaults.EnableTextMarqueeAnimations);
+        Assert.False(newUserDefaults.EnableVinylRotationAnimations);
+        Assert.False(newUserDefaults.EnableGlanceImageAutoRotation);
+        Assert.False(newUserDefaults.EnableCompactAmbientAnimations);
         Assert.Equal(SettingsService.WidgetAnimationEffectSlideFade, newUserDefaults.WidgetAnimationEffect);
         Assert.Equal(newUserDefaults.WidgetAnimationEffect, restoredDefaults.WidgetAnimationEffect);
         Assert.Null(newUserDefaults.LegacyWidgetCapsuleModeEnabled);

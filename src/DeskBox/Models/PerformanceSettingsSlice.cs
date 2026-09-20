@@ -35,17 +35,17 @@ public sealed class PerformanceSettingsSlice
     public string PerformanceCacheBudget { get; set; } = "Small";
 
     /// <summary>Legacy compatibility mirror for the former all-or-nothing decorative-effects switch.</summary>
-    public bool EnableContinuousDecorativeAnimations { get; set; } = true;
+    public bool EnableContinuousDecorativeAnimations { get; set; }
 
     /// <summary>Whether continuously scrolling title text may run.</summary>
-    public bool EnableTextMarqueeAnimations { get; set; } = true;
+    public bool EnableTextMarqueeAnimations { get; set; }
 
     /// <summary>Whether music vinyl artwork may rotate while playback is active.</summary>
-    public bool EnableVinylRotationAnimations { get; set; } = true;
+    public bool EnableVinylRotationAnimations { get; set; }
 
     /// <summary>Whether Glance widgets may automatically advance their image rotation.</summary>
-    public bool EnableGlanceImageAutoRotation { get; set; } = true;
+    public bool EnableGlanceImageAutoRotation { get; set; }
 
     /// <summary>Whether capsule glow, particle, breathing, and indeterminate ambient effects may run.</summary>
-    public bool EnableCompactAmbientAnimations { get; set; } = true;
+    public bool EnableCompactAmbientAnimations { get; set; }
 }

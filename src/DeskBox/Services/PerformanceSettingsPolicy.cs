@@ -73,11 +73,11 @@ public static class PerformanceSettingsPolicy
         HiddenCacheCleanupScopeAllRecreatable;
     public const bool DefaultIdleWorkingSetTrimEnabled = true;
     public const bool DefaultImmediateHiddenWorkingSetTrimEnabled = true;
-    public const bool DefaultContinuousDecorativeAnimationsEnabled = true;
-    public const bool DefaultTextMarqueeAnimationsEnabled = true;
-    public const bool DefaultVinylRotationAnimationsEnabled = true;
-    public const bool DefaultGlanceImageAutoRotationEnabled = true;
-    public const bool DefaultCompactAmbientAnimationsEnabled = true;
+    public const bool DefaultContinuousDecorativeAnimationsEnabled = false;
+    public const bool DefaultTextMarqueeAnimationsEnabled = false;
+    public const bool DefaultVinylRotationAnimationsEnabled = false;
+    public const bool DefaultGlanceImageAutoRotationEnabled = false;
+    public const bool DefaultCompactAmbientAnimationsEnabled = false;
 
     public static string NormalizeMode(string? mode)
     {
