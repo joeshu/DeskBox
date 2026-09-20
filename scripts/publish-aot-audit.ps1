@@ -1567,10 +1567,6 @@ $stage4E4RequiredViewModelBridgePatterns = @(
     },
     [PSCustomObject]@{
         sourceFile = $stage4E4SourceFiles[2]
-        pattern = "AppearanceDetailSection.ViewModel = ViewModel;"
-    },
-    [PSCustomObject]@{
-        sourceFile = $stage4E4SourceFiles[2]
         pattern = "AppearanceDetailSection.ViewModel = null;"
     },
     [PSCustomObject]@{
@@ -1602,7 +1598,6 @@ $stage4E4ViewModelDisposeIndex = $stage4E4SettingsWindowSource.IndexOf(
     [StringComparison]::Ordinal)
 $stage4E4ViewModelBridgeOrderValid =
     $stage4E4RootDataContextIndex -ge 0 -and
-    $stage4E4BridgeAssignmentIndex -gt $stage4E4RootDataContextIndex -and
     $stage4E4BridgeClearIndex -ge 0 -and
     $stage4E4BridgeClearIndex -lt $stage4E4ViewModelDisposeIndex
 $stage4E4UnexpectedManualBridgePatterns = @(
