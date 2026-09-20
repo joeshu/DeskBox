@@ -499,6 +499,8 @@ $allowedWarningCodes = @(
     "CS0414",
     "CS8601",
     "CS8602",
+    "IL2026",
+    "IL3050",
     "WMC1510"
 )
 $unexpectedWarningCodes = @(

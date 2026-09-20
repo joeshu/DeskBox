@@ -2,10 +2,6 @@ name: ARM64 Runtime Gate
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - codex/stage7b-arm64-actions
-
 permissions:
   contents: read
 

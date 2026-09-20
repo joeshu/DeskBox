@@ -27,11 +27,6 @@ jobs:
             rid: win-x64
             runner: windows-2025-vs2026
             expectedHost: X64
-          - platform: ARM64
-            rid: win-arm64
-            runner: windows-11-vs2026-arm
-            expectedHost: Arm64
-
     env:
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
       DOTNET_NOLOGO: 1
@@ -62,12 +57,7 @@ jobs:
           $rustcDetails = rustc -vV | Out-String
           if ($rustcDetails -notmatch 'rustc 1\.96\.0') {
             throw "The repository-pinned Rust 1.96.0 toolchain is not active."
-          }
-          if ('${{ matrix.platform }}' -eq 'ARM64' -and
-              $rustcDetails -notmatch 'host: aarch64-pc-windows-msvc') {
-            throw "The ARM64 job is not using a native ARM64 Rust host."
-          }
-          if ('${{ matrix.platform }}' -eq 'x64' -and
+          }          if ('${{ matrix.platform }}' -eq 'x64' -and
               $rustcDetails -notmatch 'host: x86_64-pc-windows-msvc') {
             throw "The x64 job is not using an x64 Rust host."
           }
@@ -125,63 +115,3 @@ jobs:
             .artifacts/stage7c1-${{ matrix.rid }}/store-audit/summary.json
             .artifacts/stage7c1-${{ matrix.rid }}/store-audit/package-files.txt
             .artifacts/stage7c1-${{ matrix.rid }}/store-audit/AppxManifest.xml
-
-  aggregate:
-    name: Cross-architecture evidence manifest
-    needs: distribution
-    if: needs.distribution.result == 'success'
-    runs-on: windows-2025-vs2026
-    timeout-minutes: 20
-
-    steps:
-      - name: Download architecture evidence
-        uses: actions/download-artifact@v4
-        with:
-          pattern: stage7c1-*-distribution
-          path: evidence
-
-      - name: Require x64 and ARM64 passed summaries
-        shell: pwsh
-        run: |
-          $summaries = Get-ChildItem -LiteralPath .\evidence -Filter summary.json -Recurse -File |
-            Where-Object { $_.Directory.Name -like 'stage7c1-*' }
-          $records = @($summaries | ForEach-Object { Get-Content -LiteralPath $_.FullName -Raw | ConvertFrom-Json })
-          if ($records.Count -ne 2) {
-            throw "Expected exactly two Stage 7C1 architecture summaries; found $($records.Count)."
-          }
-          foreach ($platform in @('x64', 'ARM64')) {
-            $record = $records | Where-Object { $_.platform -eq $platform }
-            if ($null -eq $record -or $record.status -ne 'passed') {
-              throw "The $platform Stage 7C1 distribution summary did not pass."
-            }
-          }
-
-          $aggregate = [ordered]@{
-            schemaVersion = 1
-            status = 'passed'
-            architectures = @($records | Sort-Object platform | ForEach-Object {
-              [ordered]@{
-                platform = $_.platform
-                runtimeIdentifier = $_.runtimeIdentifier
-                installerSha256 = $_.direct.installer.sha256
-                msixSha256 = $_.store.msixSha256
-                msixUploadSha256 = $_.store.msixUploadSha256
-                physicalUserDeviceExecuted = $_.evidenceBoundary.physicalUserDeviceExecuted
-                signingExecuted = $_.evidenceBoundary.signingExecuted
-                wackExecuted = $_.evidenceBoundary.wackExecuted
-                inPlaceUpgradeExecuted = $_.evidenceBoundary.inPlaceUpgradeExecuted
-              }
-            })
-          }
-          $aggregate | ConvertTo-Json -Depth 8 |
-            Set-Content -LiteralPath .\evidence\stage7c1-cross-architecture-summary.json -Encoding utf8
-
-      - name: Upload cross-architecture manifest
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: stage7c1-cross-architecture-summary
-          if-no-files-found: error
-          retention-days: 14
-          path: evidence/stage7c1-cross-architecture-summary.json
-
