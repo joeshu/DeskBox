@@ -1,3 +1,4 @@
+# Re-run distribution audit after Actions was enabled.
 # Trigger distribution audit on branch updates.\r\nname: Native AOT Distribution Gate
 
 on:
